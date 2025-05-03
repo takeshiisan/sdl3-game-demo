@@ -1,3 +1,7 @@
+/*
+    A hobby project of mine, trying to learn SDL3 by making a platformer game, with proper gravity physics and such.
+*/
+
 #define SDL_MAIN_USE_CALLBACKS 1  /* use the callbacks instead of main() */
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
