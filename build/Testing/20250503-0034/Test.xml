@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-c++"
+	BuildStamp="20250503-0034-Experimental"
+	Name="fedora"
+	Generator="ctest-3.31.6"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="15.1.1"
+	OSName="Linux"
+	Hostname="fedora"
+	OSRelease="6.14.4-300.fc42.x86_64"
+	OSVersion="#1 SMP PREEMPT_DYNAMIC Fri Apr 25 15:43:38 UTC 2025"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="78"
+	ModelName="Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz"
+	ProcessorCacheSize="3072"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="2"
+	TotalVirtualMemory="8191"
+	TotalPhysicalMemory="15839"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="1500"
+	>
+	<Testing>
+		<StartDateTime>May 03 13:04 EDT</StartDateTime>
+		<StartTestTime>1746291872</StartTestTime>
+		<TestList/>
+		<EndDateTime>May 03 13:04 EDT</EndDateTime>
+		<EndTestTime>1746291872</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

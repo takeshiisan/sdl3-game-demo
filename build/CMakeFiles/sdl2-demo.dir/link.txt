@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -Wl,--dependency-file=CMakeFiles/sdl2-demo.dir/link.d "CMakeFiles/sdl2-demo.dir/src/main.cpp.o" -o sdl2-demo  -lSDL3 -lSDL3_image

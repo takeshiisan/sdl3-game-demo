@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/nathantan/Documents/001-Code/sdl2/001_project/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/sdl2-demo.dir/src/main.cpp.o -c /home/nathantan/Documents/001-Code/sdl2/001_project/src/main.cpp",
+  "file": "/home/nathantan/Documents/001-Code/sdl2/001_project/src/main.cpp",
+  "output": "CMakeFiles/sdl2-demo.dir/src/main.cpp.o"
+}
+]
