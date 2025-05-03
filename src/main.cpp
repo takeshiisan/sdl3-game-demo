@@ -57,7 +57,6 @@ SDL_AppResult SDL_AppIterate(void *appstate)
     SDL_RenderTexture(renderer,player_texture,&sprite_portion,&player_position);
     
     /* PLAYER SECTON END*/
-    
     // Presents all the render functions
     SDL_RenderPresent(renderer);
 
