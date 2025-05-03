@@ -25,7 +25,7 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char *argv[])
         return SDL_APP_FAILURE;
     }
 
-    const char player[] = "/home/nathantan/Documents/001-Code/sdl2/001_project/graphics/kenney_pixel-platformer/Tilemap/tilemap-characters.png"; // PATH TO CHARACTER TEXTURE
+    const char player[] = "/home/nathantan/Documents/001-Code/sdl2/sdl3-demo-game/graphics/kenney_pixel-platformer/Tilemap/tilemap-characters.png"; // PATH TO CHARACTER TEXTURE
 
     player_texture = IMG_LoadTexture(renderer,player); // LOADS PLAYER TEXTURE
 
