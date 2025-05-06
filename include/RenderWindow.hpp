@@ -9,8 +9,9 @@ public:
         SDL_Texture* loadTexture(const char* p_filepath);
         void cleanUp();
         void clear();
+        void bgcolor(); //renders a background colour
 	//  void render(Entity& p_entity);
-	    void display();
+	void display();
 private:
 	    SDL_Window* window;
 	    SDL_Renderer* renderer;

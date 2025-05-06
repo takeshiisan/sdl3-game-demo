@@ -28,7 +28,7 @@ int main() {
         {
             if(event.type == SDL_EVENT_QUIT)
                 gameRunning = false;
-        }
+        } 
 
         window.clear();
         window.display();

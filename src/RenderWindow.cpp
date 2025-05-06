@@ -30,3 +30,8 @@ void RenderWindow::display()
 {
     SDL_RenderPresent(renderer);
 }
+
+void RenderWindow::bgcolor()
+{
+    
+}
