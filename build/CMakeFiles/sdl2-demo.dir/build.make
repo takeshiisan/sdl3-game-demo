@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nathantan/Documents/001-Code/sdl2/001_project
+CMAKE_SOURCE_DIR = /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nathantan/Documents/001-Code/sdl2/001_project/build
+CMAKE_BINARY_DIR = /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/sdl2-demo.dir/depend.make
@@ -73,31 +73,47 @@ CMakeFiles/sdl2-demo.dir/codegen:
 .PHONY : CMakeFiles/sdl2-demo.dir/codegen
 
 CMakeFiles/sdl2-demo.dir/src/main.cpp.o: CMakeFiles/sdl2-demo.dir/flags.make
-CMakeFiles/sdl2-demo.dir/src/main.cpp.o: /home/nathantan/Documents/001-Code/sdl2/001_project/src/main.cpp
+CMakeFiles/sdl2-demo.dir/src/main.cpp.o: /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/main.cpp
 CMakeFiles/sdl2-demo.dir/src/main.cpp.o: CMakeFiles/sdl2-demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/nathantan/Documents/001-Code/sdl2/001_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sdl2-demo.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sdl2-demo.dir/src/main.cpp.o -MF CMakeFiles/sdl2-demo.dir/src/main.cpp.o.d -o CMakeFiles/sdl2-demo.dir/src/main.cpp.o -c /home/nathantan/Documents/001-Code/sdl2/001_project/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sdl2-demo.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sdl2-demo.dir/src/main.cpp.o -MF CMakeFiles/sdl2-demo.dir/src/main.cpp.o.d -o CMakeFiles/sdl2-demo.dir/src/main.cpp.o -c /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/main.cpp
 
 CMakeFiles/sdl2-demo.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sdl2-demo.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nathantan/Documents/001-Code/sdl2/001_project/src/main.cpp > CMakeFiles/sdl2-demo.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/main.cpp > CMakeFiles/sdl2-demo.dir/src/main.cpp.i
 
 CMakeFiles/sdl2-demo.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sdl2-demo.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nathantan/Documents/001-Code/sdl2/001_project/src/main.cpp -o CMakeFiles/sdl2-demo.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/main.cpp -o CMakeFiles/sdl2-demo.dir/src/main.cpp.s
+
+CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o: CMakeFiles/sdl2-demo.dir/flags.make
+CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o: /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/RenderWindow.cpp
+CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o: CMakeFiles/sdl2-demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o -MF CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o.d -o CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o -c /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/RenderWindow.cpp
+
+CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/RenderWindow.cpp > CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.i
+
+CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/RenderWindow.cpp -o CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.s
 
 # Object files for target sdl2-demo
 sdl2__demo_OBJECTS = \
-"CMakeFiles/sdl2-demo.dir/src/main.cpp.o"
+"CMakeFiles/sdl2-demo.dir/src/main.cpp.o" \
+"CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o"
 
 # External object files for target sdl2-demo
 sdl2__demo_EXTERNAL_OBJECTS =
 
 sdl2-demo: CMakeFiles/sdl2-demo.dir/src/main.cpp.o
+sdl2-demo: CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o
 sdl2-demo: CMakeFiles/sdl2-demo.dir/build.make
 sdl2-demo: CMakeFiles/sdl2-demo.dir/compiler_depend.ts
 sdl2-demo: CMakeFiles/sdl2-demo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/nathantan/Documents/001-Code/sdl2/001_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable sdl2-demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable sdl2-demo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sdl2-demo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -109,6 +125,6 @@ CMakeFiles/sdl2-demo.dir/clean:
 .PHONY : CMakeFiles/sdl2-demo.dir/clean
 
 CMakeFiles/sdl2-demo.dir/depend:
-	cd /home/nathantan/Documents/001-Code/sdl2/001_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nathantan/Documents/001-Code/sdl2/001_project /home/nathantan/Documents/001-Code/sdl2/001_project /home/nathantan/Documents/001-Code/sdl2/001_project/build /home/nathantan/Documents/001-Code/sdl2/001_project/build /home/nathantan/Documents/001-Code/sdl2/001_project/build/CMakeFiles/sdl2-demo.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build/CMakeFiles/sdl2-demo.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/sdl2-demo.dir/depend
 

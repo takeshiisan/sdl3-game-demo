@@ -1,5 +1,5 @@
-/home/nathantan/Documents/001-Code/sdl2/001_project/build/CMakeFiles/sdl2-demo.dir
-/home/nathantan/Documents/001-Code/sdl2/001_project/build/CMakeFiles/package.dir
-/home/nathantan/Documents/001-Code/sdl2/001_project/build/CMakeFiles/package_source.dir
-/home/nathantan/Documents/001-Code/sdl2/001_project/build/CMakeFiles/edit_cache.dir
-/home/nathantan/Documents/001-Code/sdl2/001_project/build/CMakeFiles/rebuild_cache.dir
+/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build/CMakeFiles/sdl2-demo.dir
+/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build/CMakeFiles/package.dir
+/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build/CMakeFiles/package_source.dir
+/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build/CMakeFiles/edit_cache.dir
+/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build/CMakeFiles/rebuild_cache.dir

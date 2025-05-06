@@ -3,6 +3,7 @@ sdl2-demo: \
   /usr/lib/gcc/x86_64-redhat-linux/15/../../../../lib64/crti.o \
   /usr/lib/gcc/x86_64-redhat-linux/15/crtbegin.o \
   CMakeFiles/sdl2-demo.dir/src/main.cpp.o \
+  CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o \
   /usr/lib/gcc/x86_64-redhat-linux/15/../../../../lib64/libSDL3.so \
   /usr/lib/gcc/x86_64-redhat-linux/15/../../../../lib64/libSDL3_image.so \
   /usr/lib/gcc/x86_64-redhat-linux/15/libstdc++.so \
@@ -40,6 +41,8 @@ sdl2-demo: \
 /usr/lib/gcc/x86_64-redhat-linux/15/crtbegin.o:
 
 CMakeFiles/sdl2-demo.dir/src/main.cpp.o:
+
+CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o:
 
 /usr/lib/gcc/x86_64-redhat-linux/15/../../../../lib64/libSDL3.so:
 

@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "sdl2-demo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-sdl2-demo-Debug-07e8deebdab6bd1ceb68.json",
+					"jsonFile" : "target-sdl2-demo-Debug-2edf11ac715b66353ab7.json",
 					"name" : "sdl2-demo",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/nathantan/Documents/001-Code/sdl2/001_project/build",
-		"source" : "/home/nathantan/Documents/001-Code/sdl2/001_project"
+		"build" : "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build",
+		"source" : "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo"
 	},
 	"version" : 
 	{

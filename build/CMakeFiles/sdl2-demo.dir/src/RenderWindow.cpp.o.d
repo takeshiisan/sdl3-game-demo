@@ -1,5 +1,5 @@
-CMakeFiles/sdl2-demo.dir/src/main.cpp.o: \
- /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/main.cpp \
+CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o: \
+ /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/RenderWindow.cpp \
  /usr/include/stdc-predef.h /usr/include/SDL3/SDL.h \
  /usr/include/SDL3/SDL_stdinc.h /usr/include/SDL3/SDL_platform_defines.h \
  /usr/lib/gcc/x86_64-redhat-linux/15/include/stdarg.h \

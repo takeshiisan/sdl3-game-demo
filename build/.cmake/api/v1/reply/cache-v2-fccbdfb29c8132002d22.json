@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/nathantan/Documents/001-Code/sdl2/001_project/build"
+			"value" : "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -555,7 +555,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/nathantan/Documents/001-Code/sdl2/001_project/build/CMakeFiles/pkgRedirects"
+			"value" : "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -615,7 +615,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/nathantan/Documents/001-Code/sdl2/001_project"
+			"value" : "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1263,7 +1263,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/nathantan/Documents/001-Code/sdl2/001_project/build"
+			"value" : "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build"
 		},
 		{
 			"name" : "sdl2-demo_IS_TOP_LEVEL",
@@ -1287,7 +1287,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/nathantan/Documents/001-Code/sdl2/001_project"
+			"value" : "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo"
 		}
 	],
 	"kind" : "cache",

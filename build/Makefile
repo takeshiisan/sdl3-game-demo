@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nathantan/Documents/001-Code/sdl2/001_project
+CMAKE_SOURCE_DIR = /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nathantan/Documents/001-Code/sdl2/001_project/build
+CMAKE_BINARY_DIR = /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/nathantan/Documents/001-Code/sdl2/001_project/build/CPackSourceConfig.cmake
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -107,9 +107,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nathantan/Documents/001-Code/sdl2/001_project/build/CMakeFiles /home/nathantan/Documents/001-Code/sdl2/001_project/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build/CMakeFiles /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nathantan/Documents/001-Code/sdl2/001_project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -149,6 +149,30 @@ sdl2-demo/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-demo.dir/build.make CMakeFiles/sdl2-demo.dir/build
 .PHONY : sdl2-demo/fast
 
+src/RenderWindow.o: src/RenderWindow.cpp.o
+.PHONY : src/RenderWindow.o
+
+# target to build an object file
+src/RenderWindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-demo.dir/build.make CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o
+.PHONY : src/RenderWindow.cpp.o
+
+src/RenderWindow.i: src/RenderWindow.cpp.i
+.PHONY : src/RenderWindow.i
+
+# target to preprocess a source file
+src/RenderWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-demo.dir/build.make CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.i
+.PHONY : src/RenderWindow.cpp.i
+
+src/RenderWindow.s: src/RenderWindow.cpp.s
+.PHONY : src/RenderWindow.s
+
+# target to generate assembly for a file
+src/RenderWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-demo.dir/build.make CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.s
+.PHONY : src/RenderWindow.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -184,6 +208,9 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... sdl2-demo"
+	@echo "... src/RenderWindow.o"
+	@echo "... src/RenderWindow.i"
+	@echo "... src/RenderWindow.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
