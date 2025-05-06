@@ -38,3 +38,7 @@ int main() {
     SDL_Quit();
 
 }
+
+/*
+    WINDOWS 11 EDITED THIS
+*/
