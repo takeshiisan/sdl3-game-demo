@@ -173,6 +173,30 @@ src/RenderWindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-demo.dir/build.make CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.s
 .PHONY : src/RenderWindow.cpp.s
 
+src/entity.o: src/entity.cpp.o
+.PHONY : src/entity.o
+
+# target to build an object file
+src/entity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-demo.dir/build.make CMakeFiles/sdl2-demo.dir/src/entity.cpp.o
+.PHONY : src/entity.cpp.o
+
+src/entity.i: src/entity.cpp.i
+.PHONY : src/entity.i
+
+# target to preprocess a source file
+src/entity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-demo.dir/build.make CMakeFiles/sdl2-demo.dir/src/entity.cpp.i
+.PHONY : src/entity.cpp.i
+
+src/entity.s: src/entity.cpp.s
+.PHONY : src/entity.s
+
+# target to generate assembly for a file
+src/entity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sdl2-demo.dir/build.make CMakeFiles/sdl2-demo.dir/src/entity.cpp.s
+.PHONY : src/entity.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -211,6 +235,9 @@ help:
 	@echo "... src/RenderWindow.o"
 	@echo "... src/RenderWindow.i"
 	@echo "... src/RenderWindow.s"
+	@echo "... src/entity.o"
+	@echo "... src/entity.i"
+	@echo "... src/entity.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

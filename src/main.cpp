@@ -5,7 +5,8 @@
 #include <iostream>
 
 // INCLUDING INCLUDE FILES OF THE PROGRAM
-#include "../include/RenderWindow.hpp"
+#include "RenderWindow.hpp"
+#include "Entity.hpp"
 
 int main() {
     std::cout << "test\n";
@@ -16,6 +17,10 @@ int main() {
 
     RenderWindow window("SDL3", 640, 480); // RenderwWindow is from RenderWindow.cpp and RenderWindow.hpp
     
+    const char player[] = "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/graphics/kenney_pixel-platformer/Tilemap/tilemap-characters.png"; // PATH TO CHARACTER
+
+    SDL_Texture* playerTexture = window.loadTexture(player);
+
     bool gameRunning = true;
 
     SDL_Event event;
@@ -30,6 +35,7 @@ int main() {
                 gameRunning = false;
         } 
         window.clear();
+        window.renderPlayer(playerTexture);
         window.bgcolor(0,255,0,255);
         window.display();
         

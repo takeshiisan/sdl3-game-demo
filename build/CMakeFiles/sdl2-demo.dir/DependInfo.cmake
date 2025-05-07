@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/RenderWindow.cpp" "CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o" "gcc" "CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o.d"
+  "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/entity.cpp" "CMakeFiles/sdl2-demo.dir/src/entity.cpp.o" "gcc" "CMakeFiles/sdl2-demo.dir/src/entity.cpp.o.d"
   "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/main.cpp" "CMakeFiles/sdl2-demo.dir/src/main.cpp.o" "gcc" "CMakeFiles/sdl2-demo.dir/src/main.cpp.o.d"
   "" "sdl2-demo" "gcc" "CMakeFiles/sdl2-demo.dir/link.d"
   )

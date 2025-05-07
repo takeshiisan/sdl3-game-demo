@@ -167,4 +167,5 @@ CMakeFiles/sdl2-demo.dir/src/main.cpp.o: \
  /usr/include/c++/15/bits/basic_ios.tcc \
  /usr/include/c++/15/bits/ostream.tcc /usr/include/c++/15/istream \
  /usr/include/c++/15/bits/istream.tcc \
- /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/../include/RenderWindow.hpp
+ /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/include/RenderWindow.hpp \
+ /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/include/Entity.hpp

@@ -12,6 +12,7 @@ public:
         void bgcolor(int p_r, int p_g, int p_b, int p_a); //renders a background colour
 	//  void render(Entity& p_entity);
 	void display();
+        void renderPlayer(SDL_Texture* texture);
 private:
 	    SDL_Window* window;
 	    SDL_Renderer* renderer;
