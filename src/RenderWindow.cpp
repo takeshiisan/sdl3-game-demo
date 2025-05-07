@@ -31,7 +31,7 @@ void RenderWindow::display()
     SDL_RenderPresent(renderer);
 }
 
-void RenderWindow::bgcolor()
+void RenderWindow::bgcolor(int p_r, int p_g, int p_b, int p_a)
 {
-    
+    SDL_SetRenderDrawColor(renderer,p_r,p_g,p_b,p_a);
 }

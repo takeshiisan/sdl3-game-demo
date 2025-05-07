@@ -9,7 +9,7 @@ public:
         SDL_Texture* loadTexture(const char* p_filepath);
         void cleanUp();
         void clear();
-        void bgcolor(); //renders a background colour
+        void bgcolor(int p_r, int p_g, int p_b, int p_a); //renders a background colour
 	//  void render(Entity& p_entity);
 	void display();
 private:

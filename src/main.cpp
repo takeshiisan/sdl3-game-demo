@@ -29,9 +29,10 @@ int main() {
             if(event.type == SDL_EVENT_QUIT)
                 gameRunning = false;
         } 
-
         window.clear();
+        window.bgcolor(0,255,0,255);
         window.display();
+        
 
     }
     window.cleanUp();
