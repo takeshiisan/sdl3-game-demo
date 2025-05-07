@@ -55,3 +55,5 @@ void RenderWindow::renderPlayer(SDL_Texture* texture)
     SDL_FRect player_position = {200,200,48,52};
     SDL_RenderTexture(renderer,texture,&sprite_portion,&player_position);
 }
+
+// commit
