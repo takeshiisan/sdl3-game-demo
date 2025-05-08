@@ -15,11 +15,21 @@ int main() {
         std::cout << "SDL_INIT FAILED... SDL ERROR: " << SDL_GetError() << std::endl;
     };
 
-    RenderWindow window("SDL3", 640, 480); // RenderwWindow is from RenderWindow.cpp and RenderWindow.hpp
-    
+    RenderWindow window("SDL3", 1280, 720); // RenderwWindow is from RenderWindow.cpp and RenderWindow.hpp
+
+    /* Filepaths to each texture in the game*/
     const char player[] = "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/graphics/kenney_pixel-platformer/Tilemap/tilemap-characters.png"; // PATH TO CHARACTER
+    const char worldmap[] = "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/graphics/kenney_pixel-platformer/Tilemap/tilemap-backgrounds_packed.png"; // PATH TO WORLDMAP
+    const char tilemap[] = "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/graphics/kenney_pixel-platformer/Tilemap/tilemap.png"; // PATH TO TILEDMAP
 
     SDL_Texture* playerTexture = window.loadTexture(player);
+    SDL_Texture* worldTexture = window.loadTexture(worldmap);
+    SDL_Texture* tileTexture = window.loadTexture(tilemap);
+    /* 
+        SCALES THE TEXTURE GRAPHIC TO NEAREST
+    */
+    SDL_SetTextureScaleMode(worldTexture,SDL_SCALEMODE_NEAREST);
+    SDL_SetTextureScaleMode(playerTexture,SDL_SCALEMODE_NEAREST);
 
     bool gameRunning = true;
 
@@ -35,11 +45,13 @@ int main() {
                 gameRunning = false;
         } 
         window.clear();
-        window.renderPlayer(playerTexture);
+        window.renderMap(worldTexture);
+        window.renderPlayer(playerTexture, 48, 520);
+        window.renderPlayer(playerTexture, 128, 520);
+        window.renderTile(tileTexture,128,580);
         window.bgcolor(0,255,0,255);
         window.display();
         
-
     }
     window.cleanUp();
     SDL_Quit();

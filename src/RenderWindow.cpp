@@ -49,11 +49,24 @@ void RenderWindow::bgcolor(int p_r, int p_g, int p_b, int p_a)
     SDL_SetRenderDrawColor(renderer,p_r,p_g,p_b,p_a);
 }
 
-void RenderWindow::renderPlayer(SDL_Texture* texture)
+void RenderWindow::renderPlayer(SDL_Texture* playerTex, int p_x, int p_y)
 {
     SDL_FRect sprite_portion = {0,0,24,26};
-    SDL_FRect player_position = {200,200,48,52};
-    SDL_RenderTexture(renderer,texture,&sprite_portion,&player_position);
+    SDL_FRect player_position = {p_x,p_y,48,52};
+    SDL_RenderTexture(renderer,playerTex,&sprite_portion,&player_position);
+}
+
+void RenderWindow::renderMap(SDL_Texture* worldTex)
+{
+    SDL_FRect sprite_portion = {0,0,96,72};
+    SDL_RenderTexture(renderer,worldTex,&sprite_portion,NULL);
+}
+
+void RenderWindow::renderTile(SDL_Texture* tileTex, int p_x, int p_y)
+{
+    SDL_FRect sprite_portion = {0,0,18,18};
+    SDL_FRect tile_position = {p_x,p_y,36,36};
+    SDL_RenderTexture(renderer,tileTex,&sprite_portion,&tile_position);
 }
 
 // commit

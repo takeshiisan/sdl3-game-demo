@@ -12,7 +12,9 @@ public:
         void bgcolor(int p_r, int p_g, int p_b, int p_a); //renders a background colour
 	//  void render(Entity& p_entity);
 	void display();
-        void renderPlayer(SDL_Texture* texture);
+        void renderPlayer(SDL_Texture* playerTex, int p_x, int p_y);
+        void renderMap(SDL_Texture* worldTex);
+        void renderTile(SDL_Texture* tileTex, int p_x, int p_y);
 private:
 	    SDL_Window* window;
 	    SDL_Renderer* renderer;
