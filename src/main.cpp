@@ -33,16 +33,27 @@ int main() {
 
     bool gameRunning = true;
 
-    SDL_Event event;
+    SDL_Event e;
 
     /* the heart of the program. this is where different type of events are placed and occurs. keyboard presses, window quits, etc*/
     
     while(gameRunning)
     {
-        while(SDL_PollEvent(&event))
+        while(SDL_PollEvent(&e))
         {
-            if(event.type == SDL_EVENT_QUIT)
+            if(e.type == SDL_EVENT_QUIT)
                 gameRunning = false;
+            if (e.type == SDL_EVENT_KEY_DOWN) {
+                /* the pressed key was Escape? */
+                if (e.key.key == SDLK_ESCAPE) {
+                    gameRunning = false;
+                    std::cout << "ESC button pressed. Exiting..\n";
+                }
+                if(e.key.scancode == SDL_SCANCODE_W) {
+                        
+                    std::cout << "W key pressed\n";
+                }
+            }    
         } 
         window.clear();
         window.renderMap(worldTexture);
