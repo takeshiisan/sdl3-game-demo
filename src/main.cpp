@@ -8,6 +8,8 @@
 #include "RenderWindow.hpp"
 #include "Entity.hpp"
 
+int p_x = 48;
+
 int main() {
     std::cout << "test\n";
 
@@ -49,16 +51,17 @@ int main() {
                     gameRunning = false;
                     std::cout << "ESC button pressed. Exiting..\n";
                 }
-                if(e.key.scancode == SDL_SCANCODE_W) {
-                        
-                    std::cout << "W key pressed\n";
+                if(e.key.scancode == SDL_SCANCODE_D) {
+                    p_x += 1;
+                    std::cout << p_x << "\n";
+                    std::cout << "D key pressed\n";
                 }
             }    
         } 
         window.clear();
         window.renderMap(worldTexture);
-        window.renderPlayer(playerTexture, 48, 520);
-        window.renderPlayer(playerTexture, 128, 520);
+        window.renderPlayer(playerTexture, p_x, 520);
+        //window.renderPlayer(playerTexture, 128, 520);
         window.renderTile(tileTexture,128,580);
         window.bgcolor(0,255,0,255);
         window.display();
