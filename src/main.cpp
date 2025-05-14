@@ -9,6 +9,8 @@
 #include "Entity.hpp"
 
 int p_x = 48;
+int screenX = 1280;
+int screenY = 720;
 
 int main() {
     std::cout << "test\n";
@@ -17,7 +19,7 @@ int main() {
         std::cout << "SDL_INIT FAILED... SDL ERROR: " << SDL_GetError() << std::endl;
     };
 
-    RenderWindow window("SDL3", 1280, 720); // RenderwWindow is from RenderWindow.cpp and RenderWindow.hpp
+    RenderWindow window("SDL3", screenX, screenY); // RenderwWindow is from RenderWindow.cpp and RenderWindow.hpp
 
     /* Filepaths to each texture in the game*/
     const char player[] = "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/graphics/kenney_pixel-platformer/Tilemap/tilemap-characters.png"; // PATH TO CHARACTER
@@ -33,16 +35,36 @@ int main() {
     SDL_SetTextureScaleMode(worldTexture,SDL_SCALEMODE_NEAREST);
     SDL_SetTextureScaleMode(playerTexture,SDL_SCALEMODE_NEAREST);
 
+    /* 
+        Bellow is the enumarations 
+        for each direction for the player
+    */
+
+    enum Direction {    
+        DOWN,
+        LEFT,
+        RIGHT, 
+        UP
+    };
+
     bool gameRunning = true;
-
+    int dir = 0; 
     SDL_Event e;
-
+    Uint32 lastTicks = SDL_GetTicks();
     /* the heart of the program. this is where different type of events are placed and occurs. keyboard presses, window quits, etc*/
     
     while(gameRunning)
     {
+        Uint32 nowTicks = SDL_GetTicks();
+
+        // Dt in seconds
+        float deltaTime = (nowTicks - lastTicks) * 0.001f;
+        
+        lastTicks = nowTicks;
+
         while(SDL_PollEvent(&e))
         {
+            std::cout << p_x << '\n';
             if(e.type == SDL_EVENT_QUIT)
                 gameRunning = false;
             if (e.type == SDL_EVENT_KEY_DOWN) {
@@ -51,13 +73,29 @@ int main() {
                     gameRunning = false;
                     std::cout << "ESC button pressed. Exiting..\n";
                 }
-                if(e.key.scancode == SDL_SCANCODE_D) {
-                    p_x += 1;
-                    std::cout << p_x << "\n";
-                    std::cout << "D key pressed\n";
-                }
+                if(e.key.scancode == SDL_SCANCODE_D) { dir = RIGHT; };
+                if(e.key.scancode == SDL_SCANCODE_A) { dir = LEFT; };
             }    
         } 
+        switch(dir)
+        {
+            case RIGHT:
+                    p_x += 1; break; 
+            case LEFT: 
+                    p_x -= 1; break;
+        }
+
+        if(p_x >= screenX) {
+            p_x = 1280;
+        }
+        if(p_x <= 0) {
+            p_x = 0;
+        }
+
+        // MOVEMENT OF PLAYER
+        //
+
+
         window.clear();
         window.renderMap(worldTexture);
         window.renderPlayer(playerTexture, p_x, 520);
