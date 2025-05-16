@@ -1,19 +1,19 @@
 [
 {
   "directory": "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build",
-  "command": "/usr/bin/c++  -I/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/include -g -o CMakeFiles/sdl2-demo.dir/src/main.cpp.o -c /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/main.cpp",
+  "command": "/usr/bin/c++  -I/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/include -I/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/graphics -g -o CMakeFiles/sdl2-demo.dir/src/main.cpp.o -c /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/main.cpp",
   "file": "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/main.cpp",
   "output": "CMakeFiles/sdl2-demo.dir/src/main.cpp.o"
 },
 {
   "directory": "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build",
-  "command": "/usr/bin/c++  -I/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/include -g -o CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o -c /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/RenderWindow.cpp",
+  "command": "/usr/bin/c++  -I/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/include -I/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/graphics -g -o CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o -c /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/RenderWindow.cpp",
   "file": "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/RenderWindow.cpp",
   "output": "CMakeFiles/sdl2-demo.dir/src/RenderWindow.cpp.o"
 },
 {
   "directory": "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/build",
-  "command": "/usr/bin/c++  -I/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/include -g -o CMakeFiles/sdl2-demo.dir/src/entity.cpp.o -c /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/entity.cpp",
+  "command": "/usr/bin/c++  -I/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/include -I/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/graphics -g -o CMakeFiles/sdl2-demo.dir/src/entity.cpp.o -c /home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/entity.cpp",
   "file": "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/src/entity.cpp",
   "output": "CMakeFiles/sdl2-demo.dir/src/entity.cpp.o"
 }

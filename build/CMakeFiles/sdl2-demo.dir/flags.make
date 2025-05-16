@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/include
+CXX_INCLUDES = -I/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/include -I/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/graphics
 
 CXX_FLAGS = -g
 

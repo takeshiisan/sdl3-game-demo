@@ -5,5 +5,5 @@ add_executable(sdl2-demo src/main.cpp src/RenderWindow.cpp src/entity.cpp)
 
 target_link_libraries(sdl2-demo SDL3 SDL3_image)
 
-target_include_directories(sdl2-demo PRIVATE include)
+target_include_directories(sdl2-demo PRIVATE include PUBLIC graphics)
 
