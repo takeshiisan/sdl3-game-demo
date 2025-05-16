@@ -9,6 +9,7 @@
 #include "Entity.hpp"
 
 int p_x = 48;
+int bulletX = p_x;
 int screenX = 1280;
 int screenY = 720;
 
@@ -25,15 +26,18 @@ int main() {
     const char player[] = "../graphics/kenney_pixel-platformer/Tilemap/tilemap-characters.png"; // PATH TO CHARACTER
     const char worldmap[] = "../graphics/kenney_pixel-platformer/Tilemap/tilemap-backgrounds_packed.png"; // PATH TO WORLDMAP
     const char tilemap[] = "../graphics/kenney_pixel-platformer/Tilemap/tilemap.png"; // PATH TO TILEDMAP
+    const char bullet[] = "../graphics/kenney_pixel-platformer/Tilemap/tilemap-characters.png";
 
     SDL_Texture* playerTexture = window.loadTexture(player);
     SDL_Texture* worldTexture = window.loadTexture(worldmap);
     SDL_Texture* tileTexture = window.loadTexture(tilemap);
+    SDL_Texture* bulletTexture = window.loadTexture(bullet);
     /* 
         SCALES THE TEXTURE GRAPHIC TO NEAREST
     */
     SDL_SetTextureScaleMode(worldTexture,SDL_SCALEMODE_NEAREST);
     SDL_SetTextureScaleMode(playerTexture,SDL_SCALEMODE_NEAREST);
+    SDL_SetTextureScaleMode(bulletTexture,SDL_SCALEMODE_NEAREST);
 
     /* 
         Bellow is the enumarations 
@@ -44,7 +48,8 @@ int main() {
         DOWN,
         LEFT,
         RIGHT, 
-        UP
+        UP,
+        SHOOT
     };
 
     bool gameRunning = true;
@@ -55,12 +60,12 @@ int main() {
     
     while(gameRunning)
     {
-        Uint32 nowTicks = SDL_GetTicks();
+        // Uint32 nowTicks = SDL_GetTicks();
 
-        // Dt in seconds
-        float deltaTime = (nowTicks - lastTicks) * 0.001f;
+        // // Dt in seconds
+        // float deltaTime = (nowTicks - lastTicks) * 0.001f;
         
-        lastTicks = nowTicks;
+        // lastTicks = nowTicks;
 
         while(SDL_PollEvent(&e))
         {
@@ -75,6 +80,9 @@ int main() {
                 }
                 if(e.key.scancode == SDL_SCANCODE_D) { dir = RIGHT; };
                 if(e.key.scancode == SDL_SCANCODE_A) { dir = LEFT; };
+                if(e.key.scancode == SDL_SCANCODE_S) {
+                    dir = SHOOT;
+                };
             }    
         } 
         switch(dir)
@@ -83,6 +91,10 @@ int main() {
                     p_x += 1; break; 
             case LEFT: 
                     p_x -= 1; break;
+            case SHOOT: 
+                bulletX += 1;
+                break;
+
         }
 
         if(p_x >= screenX) {
@@ -97,9 +109,10 @@ int main() {
 
 
         window.clear();
-        window.renderMap(worldTexture);
-        window.renderPlayer(playerTexture, p_x, 520);
-        //window.renderPlayer(playerTexture, 128, 520);
+        // window.renderPlayer(bulletTexture, bulletX, 820);
+        // window.renderMap(worldTexture);
+        // window.renderPlayer(playerTexture, p_x, 520);
+        // window.renderPlayer(playerTexture, 128, 520);
         window.renderTile(tileTexture,128,580);
         window.bgcolor(0,255,0,255);
         window.display();
