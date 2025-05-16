@@ -22,9 +22,9 @@ int main() {
     RenderWindow window("SDL3", screenX, screenY); // RenderwWindow is from RenderWindow.cpp and RenderWindow.hpp
 
     /* Filepaths to each texture in the game*/
-    const char player[] = "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/graphics/kenney_pixel-platformer/Tilemap/tilemap-characters.png"; // PATH TO CHARACTER
-    const char worldmap[] = "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/graphics/kenney_pixel-platformer/Tilemap/tilemap-backgrounds_packed.png"; // PATH TO WORLDMAP
-    const char tilemap[] = "/home/nathantan/Documents/001-Code/sdl2/sdl3-game-demo/graphics/kenney_pixel-platformer/Tilemap/tilemap.png"; // PATH TO TILEDMAP
+    const char player[] = "../graphics/kenney_pixel-platformer/Tilemap/tilemap-characters.png"; // PATH TO CHARACTER
+    const char worldmap[] = "../graphics/kenney_pixel-platformer/Tilemap/tilemap-backgrounds_packed.png"; // PATH TO WORLDMAP
+    const char tilemap[] = "../graphics/kenney_pixel-platformer/Tilemap/tilemap.png"; // PATH TO TILEDMAP
 
     SDL_Texture* playerTexture = window.loadTexture(player);
     SDL_Texture* worldTexture = window.loadTexture(worldmap);
