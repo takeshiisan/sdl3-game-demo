@@ -86,7 +86,7 @@ int main() {
         }
 
         if(p_x >= screenX) {
-            p_x = 1280;
+            p_x = 1200;
         }
         if(p_x <= 0) {
             p_x = 0;
