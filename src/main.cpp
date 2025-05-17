@@ -9,9 +9,11 @@
 #include "Entity.hpp"
 
 int p_x = 48;
-int bulletX = p_x;
+int bulletX = 100;
 int screenX = 1280;
 int screenY = 720;
+
+void fire();
 
 int main() {
     std::cout << "test\n";
@@ -70,6 +72,8 @@ int main() {
         while(SDL_PollEvent(&e))
         {
             std::cout << p_x << '\n';
+            std::cout << "bullet pos: " << bulletX << '\n';
+            // bulletX = p_x;
             if(e.type == SDL_EVENT_QUIT)
                 gameRunning = false;
             if (e.type == SDL_EVENT_KEY_DOWN) {
@@ -80,22 +84,9 @@ int main() {
                 }
                 if(e.key.scancode == SDL_SCANCODE_D) { dir = RIGHT; };
                 if(e.key.scancode == SDL_SCANCODE_A) { dir = LEFT; };
-                if(e.key.scancode == SDL_SCANCODE_S) {
-                    dir = SHOOT;
-                };
+                if(e.key.scancode == SDL_SCANCODE_S) { dir = SHOOT; };
             }    
         } 
-        switch(dir)
-        {
-            case RIGHT:
-                    p_x += 1; break; 
-            case LEFT: 
-                    p_x -= 1; break;
-            case SHOOT: 
-                bulletX += 1;
-                break;
-
-        }
 
         if(p_x >= screenX) {
             p_x = 1200;
@@ -109,9 +100,22 @@ int main() {
 
 
         window.clear();
-        // window.renderPlayer(bulletTexture, bulletX, 820);
-        // window.renderMap(worldTexture);
-        // window.renderPlayer(playerTexture, p_x, 520);
+        window.renderMap(worldTexture);
+        window.renderPlayer(playerTexture, p_x, 520);
+
+        switch(dir)
+        {
+            case RIGHT:
+                    p_x += 1; break; 
+            case LEFT: 
+                    p_x -= 1; break;
+            case SHOOT: 
+                window.renderPlayer(bulletTexture, bulletX, 520);
+                bulletX += 1;
+                break;
+
+        }
+
         // window.renderPlayer(playerTexture, 128, 520);
         window.renderTile(tileTexture,128,580);
         window.bgcolor(0,255,0,255);
@@ -121,6 +125,13 @@ int main() {
     window.cleanUp();
     SDL_Quit();
 
+}
+
+void fire(){
+    bulletX = p_x;
+    for(bulletX;bulletX < screenX;bulletX += 1) {
+        if(bulletX > screenX) {break;}
+    }
 }
 
 /*
