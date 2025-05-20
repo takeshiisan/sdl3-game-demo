@@ -51,7 +51,8 @@ int main() {
         LEFT,
         RIGHT, 
         UP,
-        SHOOT
+        SHOOT,
+        STOP
     };
 
     bool gameRunning = true;
@@ -62,12 +63,12 @@ int main() {
     
     while(gameRunning)
     {
-        // Uint32 nowTicks = SDL_GetTicks();
+        Uint32 nowTicks = SDL_GetTicks();
 
-        // // Dt in seconds
-        // float deltaTime = (nowTicks - lastTicks) * 0.001f;
+        // Dt in seconds
+        float deltaTime = (nowTicks - lastTicks) * 0.001f;
         
-        // lastTicks = nowTicks;
+        lastTicks = nowTicks;
 
         while(SDL_PollEvent(&e))
         {
@@ -85,7 +86,18 @@ int main() {
                 if(e.key.scancode == SDL_SCANCODE_D) { dir = RIGHT; };
                 if(e.key.scancode == SDL_SCANCODE_A) { dir = LEFT; };
                 if(e.key.scancode == SDL_SCANCODE_S) { dir = SHOOT; };
-            }    
+                }    
+                // When key is released
+            if (e.type == SDL_EVENT_KEY_UP) {
+                if(e.key.scancode == SDL_SCANCODE_D) {
+                    std::cout << "D KEY RELEASED\n";
+                    dir = STOP;
+                };
+                if(e.key.scancode == SDL_SCANCODE_A) {
+                    std::cout << "A KEY RELEASED\n";
+                    dir = STOP;
+                };
+            }
         } 
 
         if(p_x >= screenX) {
@@ -112,6 +124,9 @@ int main() {
             case SHOOT: 
                 window.renderPlayer(bulletTexture, bulletX, 520);
                 bulletX += 1;
+                break;
+            case STOP:
+                p_x = p_x;
                 break;
 
         }
