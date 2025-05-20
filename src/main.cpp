@@ -8,7 +8,8 @@
 #include "RenderWindow.hpp"
 #include "Entity.hpp"
 
-int p_x = 48;
+float p_x = 48.0;
+float p_y = 520.0;
 int bulletX = 100;
 int screenX = 1280;
 int screenY = 720;
@@ -113,7 +114,7 @@ int main() {
 
         window.clear();
         window.renderMap(worldTexture);
-        window.renderPlayer(playerTexture, p_x, 520);
+        window.renderPlayer(playerTexture, p_x, p_y);
 
         switch(dir)
         {
@@ -132,7 +133,7 @@ int main() {
         }
 
         // window.renderPlayer(playerTexture, 128, 520);
-        window.renderTile(tileTexture,128,580);
+        window.renderTile(tileTexture,128.0,580.0);
         window.bgcolor(0,255,0,255);
         window.display();
         

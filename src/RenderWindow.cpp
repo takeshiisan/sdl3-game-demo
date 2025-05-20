@@ -3,6 +3,7 @@
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
 #include <SDL3_image/SDL_image.h>
+#include <SDL3/SDL_render.h>
 #include <iostream>
 
 /* INCLUDE HEADER FILE OF RENDERWINDOW */
@@ -49,7 +50,7 @@ void RenderWindow::bgcolor(int p_r, int p_g, int p_b, int p_a)
     SDL_SetRenderDrawColor(renderer,p_r,p_g,p_b,p_a);
 }
 
-void RenderWindow::renderPlayer(SDL_Texture* playerTex, int p_x, int p_y)
+void RenderWindow::renderPlayer(SDL_Texture* playerTex, float p_x, float p_y)
 {
     SDL_FRect sprite_portion = {0,0,24,26};
     SDL_FRect player_position = {p_x,p_y,48,52};
@@ -62,7 +63,7 @@ void RenderWindow::renderMap(SDL_Texture* worldTex)
     SDL_RenderTexture(renderer,worldTex,&sprite_portion,NULL);
 }
 
-void RenderWindow::renderTile(SDL_Texture* tileTex, int p_x, int p_y)
+void RenderWindow::renderTile(SDL_Texture* tileTex, float p_x, float p_y)
 {
     SDL_FRect sprite_portion = {0,0,18,18};
     SDL_FRect tile_position = {p_x,p_y,36,36};
