@@ -24,6 +24,13 @@ int main() {
     };
 
     RenderWindow window("SDL3", screenX, screenY); // RenderwWindow is from RenderWindow.cpp and RenderWindow.hpp
+    
+    
+    // VARIABLES THAT UPDATES TIME
+    Uint64 last_tick = 0;
+    Uint64 current_tick = 0;
+    float delta_time;
+
 
     /* Filepaths to each texture in the game*/
     const char player[] = "../graphics/kenney_pixel-platformer/Tilemap/tilemap-characters.png"; // PATH TO CHARACTER
@@ -59,22 +66,21 @@ int main() {
     bool gameRunning = true;
     int dir = 0; 
     SDL_Event e;
-    Uint32 lastTicks = SDL_GetTicks();
+    
     /* the heart of the program. this is where different type of events are placed and occurs. keyboard presses, window quits, etc*/
     
     while(gameRunning)
     {
-        Uint32 nowTicks = SDL_GetTicks();
-
-        // Dt in seconds
-        float deltaTime = (nowTicks - lastTicks) * 0.001f;
-        
-        lastTicks = nowTicks;
+        // update
+        last_tick = current_tick;
+        current_tick = SDL_GetTicks();
+        delta_time = (current_tick - last_tick) / 1000.0f;
 
         while(SDL_PollEvent(&e))
         {
             std::cout << p_x << '\n';
             std::cout << "bullet pos: " << bulletX << '\n';
+            std::cout << "posY " << p_y << "\n";
             // bulletX = p_x;
             if(e.type == SDL_EVENT_QUIT)
                 gameRunning = false;
@@ -86,7 +92,8 @@ int main() {
                 }
                 if(e.key.scancode == SDL_SCANCODE_D) { dir = RIGHT; };
                 if(e.key.scancode == SDL_SCANCODE_A) { dir = LEFT; };
-                if(e.key.scancode == SDL_SCANCODE_S) { dir = SHOOT; };
+                if(e.key.scancode == SDL_SCANCODE_S) { dir = DOWN; };
+                if(e.key.scancode == SDL_SCANCODE_W) { dir = UP; };
                 }    
                 // When key is released
             if (e.type == SDL_EVENT_KEY_UP) {
@@ -98,23 +105,29 @@ int main() {
                     std::cout << "A KEY RELEASED\n";
                     dir = STOP;
                 };
+                if(e.key.scancode == SDL_SCANCODE_W) {
+                    std::cout << "W KEY RELEASED\n";
+                    dir = STOP;
+                };
+                if(e.key.scancode == SDL_SCANCODE_S) {
+                    std::cout << "S KEY RELEASED\n";
+                    dir = STOP;
+                };
             }
         } 
 
-        if(p_x >= screenX) {
-            p_x = 1200;
+        if(p_x >= 1240) {
+            p_x = 1240;
         }
         if(p_x <= 0) {
             p_x = 0;
         }
-
-        // MOVEMENT OF PLAYER
-        //
-
-
-        window.clear();
-        window.renderMap(worldTexture);
-        window.renderPlayer(playerTexture, p_x, p_y);
+        if(p_y >= 650) {
+            p_y = 650;
+        }
+        if(p_y <= 0) {
+            p_y = 0;
+        }
 
         switch(dir)
         {
@@ -122,16 +135,21 @@ int main() {
                     p_x += 1; break; 
             case LEFT: 
                     p_x -= 1; break;
-            case SHOOT: 
-                window.renderPlayer(bulletTexture, bulletX, 520);
-                bulletX += 1;
-                break;
             case STOP:
                 p_x = p_x;
+                p_y = p_y;
                 break;
+            case UP:
+                    p_y -= 1; break;
+            case DOWN:
+                    p_y += 1; break;
 
         }
+        
 
+        window.clear();
+        window.renderMap(worldTexture);
+        window.renderPlayer(playerTexture, p_x, p_y);
         // window.renderPlayer(playerTexture, 128, 520);
         window.renderTile(tileTexture,128.0,580.0);
         window.bgcolor(0,255,0,255);
