@@ -154,6 +154,8 @@ int main() {
         window.renderTile(tileTexture,128.0,580.0);
         window.bgcolor(0,255,0,255);
         window.display();
+
+        SDL_Delay(1);
         
     }
     window.cleanUp();
