@@ -13,6 +13,8 @@ float p_y = 520.0;
 int bulletX = 100;
 int screenX = 1280;
 int screenY = 720;
+float xSpeed = 2.5;
+float ySpeed = 2.5;
 
 void fire();
 
@@ -132,17 +134,17 @@ int main() {
         switch(dir)
         {
             case RIGHT:
-                    p_x += 1; break; 
+                    p_x += xSpeed; break; 
             case LEFT: 
-                    p_x -= 1; break;
+                    p_x -= xSpeed; break;
             case STOP:
                 p_x = p_x;
                 p_y = p_y;
                 break;
             case UP:
-                    p_y -= 1; break;
+                    p_y -= ySpeed; break;
             case DOWN:
-                    p_y += 1; break;
+                    p_y += ySpeed; break;
 
         }
         
@@ -163,6 +165,7 @@ int main() {
 
 }
 
+//supposedly a shoot function for the character but I think I will scratch this later on
 void fire(){
     bulletX = p_x;
     for(bulletX;bulletX < screenX;bulletX += 1) {
