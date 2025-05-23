@@ -130,6 +130,9 @@ int main() {
         if(p_y <= 0) {
             p_y = 0;
         }
+        if(p_y != 650) {
+            p_y += 1;
+        }
 
         switch(dir)
         {
