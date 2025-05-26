@@ -15,8 +15,9 @@ int screenX = 1280;
 int screenY = 720;
 float xSpeed = 2.5;
 float ySpeed = 2.5;
+int *numkeys;
 
-void fire();
+// void fire();
 
 int main() {
     std::cout << "test\n";
@@ -78,6 +79,8 @@ int main() {
         current_tick = SDL_GetTicks();
         delta_time = (current_tick - last_tick) / 1000.0f;
 
+        const bool* keystate = SDL_GetKeyboardState(numkeys);
+
         while(SDL_PollEvent(&e))
         {
             std::cout << p_x << '\n';
@@ -96,8 +99,14 @@ int main() {
                 if(e.key.scancode == SDL_SCANCODE_A) { dir = LEFT; };
                 if(e.key.scancode == SDL_SCANCODE_S) { dir = DOWN; };
                 if(e.key.scancode == SDL_SCANCODE_W) { dir = UP; };
+
+                if(e.key.key == SDLK_RIGHT) { dir = RIGHT; };
+                if(e.key.key == SDLK_LEFT) { dir = LEFT; };
+                if(e.key.key == SDLK_DOWN) { dir = DOWN; };
+                if(e.key.key == SDLK_UP) { dir = UP; };
+
                 }    
-                // When key is released
+                //When key is released
             if (e.type == SDL_EVENT_KEY_UP) {
                 if(e.key.scancode == SDL_SCANCODE_D) {
                     std::cout << "D KEY RELEASED\n";
@@ -112,6 +121,22 @@ int main() {
                     dir = STOP;
                 };
                 if(e.key.scancode == SDL_SCANCODE_S) {
+                    std::cout << "S KEY RELEASED\n";
+                    dir = STOP;
+                };
+                if(e.key.key == SDLK_RIGHT) {
+                    std::cout << "D KEY RELEASED\n";
+                    dir = STOP;
+                };
+                if(e.key.key == SDLK_LEFT) {
+                    std::cout << "A KEY RELEASED\n";
+                    dir = STOP;
+                };
+                if(e.key.key == SDLK_UP) {
+                    std::cout << "W KEY RELEASED\n";
+                    dir = STOP;
+                };
+                if(e.key.key == SDLK_DOWN) {
                     std::cout << "S KEY RELEASED\n";
                     dir = STOP;
                 };
@@ -166,14 +191,6 @@ int main() {
     window.cleanUp();
     SDL_Quit();
 
-}
-
-//supposedly a shoot function for the character but I think I will scratch this later on
-void fire(){
-    bulletX = p_x;
-    for(bulletX;bulletX < screenX;bulletX += 1) {
-        if(bulletX > screenX) {break;}
-    }
 }
 
 /*
